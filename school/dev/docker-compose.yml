@@ -1,0 +1,20 @@
+version: '3.7'
+
+services:
+  school:
+    build:
+      context: ../
+      dockerfile: dev/Dockerfile
+      labels:
+    ports:
+      - 8080:8080
+
+  mysql:
+    image: mysql
+    command: --default-authentication-plugin=mysql_native_password
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: schoolPass
+    ports:
+      - '3306:3306'
+
