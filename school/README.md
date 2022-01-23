@@ -7,8 +7,6 @@ To run the application you only need to be on school folder and run the command:
   
 After the docker images have started the web server will be listening on port 8080
 
-The following endpoints will be available:
-
 Student attributes:
 - id: database id (automatically asigned by the application)
 - schoolId: school number for the user
@@ -19,6 +17,8 @@ Course attributes:
 - id: database id (automatically asigned by the application)
 - name: name of the student
 - students: list of students registered in it
+
+The following endpoints will be available:
 
 - GET: /api/students -> list all students
 - GET: /api/students/{id} -> get student with the corresponding id
