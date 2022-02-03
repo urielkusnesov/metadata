@@ -2,10 +2,7 @@ version: '3.7'
 
 services:
   school:
-    build:
-      context: ../
-      dockerfile: dev/Dockerfile
-      labels:
+    image: school
     ports:
       - 8080:8080
 
@@ -15,6 +12,7 @@ services:
     restart: always
     environment:
       MYSQL_ROOT_PASSWORD: schoolPass
+      MYSQL_DATABASE: school
     ports:
       - '3306:3306'
 

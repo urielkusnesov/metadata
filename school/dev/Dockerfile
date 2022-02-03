@@ -3,7 +3,7 @@ FROM maven:3.6.3-jdk-14 as builder
 WORKDIR /school
 COPY . .
 #REMOVE SKIPTEST WHEN JUNIT
-RUN mvn clean install
+RUN mvn clean install -DskipTests=true
 
 # Run project
 FROM openjdk:14-jdk-alpine
